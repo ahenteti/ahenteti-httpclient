@@ -1,0 +1,22 @@
+.ui-resizable-e {
+  width: 1px;
+  padding: 0 5px;
+  right: -5px;
+}
+
+.ui-resizable-e::after {
+  content: '';
+  position: absolute;
+  background-color: #eee;
+  transition: var(--transition);
+  transition-property: color, background-color;
+  width: 1px;
+  top: 0;
+  right: 50%;
+  bottom: 0;
+}
+
+.ui-resizable-resizing .ui-resizable-e::after,
+.ui-resizable-e:hover::after {
+  background-color: var(--primary);
+}

@@ -1,4 +1,5 @@
 :root {
+  --transition: all 200ms ease-in;
   @media screen and (max-width: 480px) {
     --font-size: 45%;
   }
