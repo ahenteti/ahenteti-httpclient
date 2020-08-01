@@ -1,22 +1,65 @@
-.ui-resizable-e {
+.ui-resizable-n,
+.ui-resizable-s {
+  height: 1px;
+  padding: 5px 0;
+}
+
+.ui-resizable-n {
+  top: -5px;
+}
+
+.ui-resizable-s {
+  bottom: -5px;
+}
+
+.ui-resizable-e,
+.ui-resizable-w {
   width: 1px;
   padding: 0 5px;
+}
+
+.ui-resizable-e {
   right: -5px;
 }
 
-.ui-resizable-e::after {
-  content: '';
-  position: absolute;
-  background-color: #eee;
-  transition: var(--transition);
-  transition-property: color, background-color;
-  width: 1px;
-  top: 0;
-  right: 50%;
-  bottom: 0;
+.ui-resizable-w {
+  left: -5px;
 }
 
+.ui-resizable-n::after,
+.ui-resizable-e::after,
+.ui-resizable-s::after,
+.ui-resizable-w::after {
+  content: '';
+  position: absolute;
+  background-color: var(--resizable-rule-color);
+  transition: var(--transition);
+  transition-property: color, background-color;
+}
+
+.ui-resizable-n::after,
+.ui-resizable-s::after {
+  height: 1px;
+  left: 0;
+  right: 0;
+  top: 50%;
+}
+
+.ui-resizable-e::after,
+.ui-resizable-w::after {
+  width: 1px;
+  top: 0;
+  bottom: 0;
+  right: 50%;
+}
+
+.ui-resizable-resizing .ui-resizable-n::after,
+.ui-resizable-n:hover::after,
 .ui-resizable-resizing .ui-resizable-e::after,
-.ui-resizable-e:hover::after {
+.ui-resizable-e:hover::after,
+.ui-resizable-resizing .ui-resizable-s::after,
+.ui-resizable-s:hover::after,
+.ui-resizable-resizing .ui-resizable-w::after,
+.ui-resizable-w:hover::after {
   background-color: var(--primary);
 }

@@ -1,2 +1,6 @@
 // override node_modules\bootstrap\scss\_variables.scss variables
 $primary: #078eed;
+
+:root {
+  --resizable-rule-color: #eee;
+}

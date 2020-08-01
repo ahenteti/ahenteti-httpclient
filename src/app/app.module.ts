@@ -2,10 +2,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { ResizableDivComponent } from './components/resizable-div/resizable-div.component';
+import { ResizableDirective } from './directives/resizable.directive';
 
 @NgModule({
-  declarations: [AppComponent, ResizableDivComponent],
+  declarations: [AppComponent, ResizableDirective],
   imports: [BrowserModule],
   providers: [],
   bootstrap: [AppComponent],

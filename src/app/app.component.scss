@@ -15,8 +15,11 @@ main {
     / min-content 1fr;
 }
 
-.nav {
+nav {
   grid-area: nav;
+  width: 20vw;
+  min-width: 15vw;
+  max-width: 35vw;
 }
 
 header {
