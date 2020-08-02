@@ -19,12 +19,4 @@ export class ResizableDirective {
       handles: jQueryResizableHandles.join(', '),
     });
   }
-
-  private viewportToPixels(value) {
-    // code reference: https://stackoverflow.com/questions/34166341/convert-vh-units-to-px-in-js
-    const parts = value.match(/([0-9\.]+)(vh|vw)/);
-    const q = Number(parts[1]);
-    const side = window[['innerHeight', 'innerWidth'][['vh', 'vw'].indexOf(parts[2])]];
-    return side * (q / 100);
-  }
 }
