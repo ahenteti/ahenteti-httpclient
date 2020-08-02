@@ -1,6 +1,5 @@
 #!/bin/bash
 
-echo $PWD
 mkdir bin || true
 node_modules/.bin/tsc electron/*.ts --outDir bin
 node_modules/.bin/ng build
