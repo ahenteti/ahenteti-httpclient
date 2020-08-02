@@ -1,19 +1,12 @@
 // code reference: https://dev.to/ahmedmkamal/build-desktop-apps-with-the-power-of-angular-18g7
 import { app, BrowserWindow } from 'electron';
 import * as path from 'path';
-import * as fs from 'fs';
 
 const INDEX_FILE_PATH = path.join(__dirname, '../dist/index.html');
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let win: BrowserWindow;
-
-function updateIndexFileBaseTag() {
-  const fileContentOrigin = fs.readFileSync(INDEX_FILE_PATH, { encoding: 'utf8' });
-  var fileContentAfterReplace = fileContentOrigin.replace(/<base href="\/" \/>/g, '<base href="./" />');
-  fs.writeFileSync(INDEX_FILE_PATH, fileContentAfterReplace);
-}
 
 function createWindow() {
   // Create the browser window.
@@ -38,8 +31,6 @@ function createWindow() {
     win = null;
   });
 }
-
-updateIndexFileBaseTag();
 
 // This method will be called when the Electron has finished
 // initialization and is ready to create browser windows.
