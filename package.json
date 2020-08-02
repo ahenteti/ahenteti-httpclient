@@ -10,7 +10,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "electron": "tsc bin/main.ts && tsc bin/update-base-tag-for-electron-app.ts && ng build && node bin/update-base-tag-for-electron-app.js && electron bin/main.js",
+    "electron": "bash electron/electron.sh",
     "package-win": "tsc bin/main.ts && tsc bin/update-base-tag-for-electron-app.ts && ng build && node bin/update-base-tag-for-electron-app.js && electron-packager . ahenteti-httpclient --overwrite --asar --platform=win32 --arch=ia32 --icon=src/favicon.png --prune=true --out=release",
     "package-mac": "tsc bin/main.ts && tsc bin/update-base-tag-for-electron-app.ts && ng build && node bin/update-base-tag-for-electron-app.js && electron-packager . ahenteti-httpclient --overwrite --platform=darwin --arch=x64 --icon=src/favicon.png --prune=true --out=release",
     "package-linux": "tsc bin/main.ts && tsc bin/update-base-tag-for-electron-app.ts && ng build && node bin/update-base-tag-for-electron-app.js && electron-packager . ahenteti-httpclient --overwrite --asar --platform=linux --arch=x64 --icon=src/favicon.png --prune=true --out=release"
